@@ -33,6 +33,7 @@ module Lucy
     end
 
     def write(key, obj)
+      puts "Aha: #{obj.inspect}"
       @keyed << [key, ActiveSupport::JSON.encode(obj)]
     end
     alias []= write
